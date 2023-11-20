@@ -1,0 +1,76 @@
+﻿@model TravelTrip.Models.Siniflar.Blog
+@{
+    ViewBag.Title = "BlogDetay";
+    Layout = "~/Views/Shared/_ApplicationLayout.cshtml";
+}
+
+
+<link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!----webfonts---->
+<link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+<!----//webfonts---->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--end slider -->
+<!--script-->
+<script type="text/javascript" src="~/web2/js/move-top.js"></script>
+<script type="text/javascript" src="~/web2/js/easing.js"></script>
+<!--/script-->
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
+        });
+    });
+</script>
+<!---->
+
+
+<div class="single">
+    <div class="container">
+        <div class="col-md-8 single-main">
+            <div class="single-grid">
+
+                <img src="@Model.BlogImage" alt="" />
+                <div class="post-info">
+                    <h4><a href="#">@Model.Baslik</a>  @Model.Tarih.ToShortDateString()</h4>
+                </div>
+                <p>
+                    @Model.Aciklama
+                </p>
+            </div>
+            <ul class="comment-list">
+                <li>
+                    <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
+                    <div class="desc">
+                        <p>Kullanıcı Adı: Buraya Yorum Gelecek...<a href="#" title="Posts by admin" rel="author">admin</a></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            </ul>
+            <ul class="comment-list">
+                <li>
+                    <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
+                    <div class="desc">
+                        <p>Kullanıcı Adı: Buraya Yorum Gelecek...<a href="#" title="Posts by admin" rel="author">admin</a></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            </ul>
+            <div class="content-form">
+                <h3>Leave a comment</h3>
+                <form>
+                    <input type="text" placeholder="Name" required />
+                    <input type="text" placeholder="Email" required />
+                    <input type="text" placeholder="Phone" required />
+                    <textarea placeholder="Message"></textarea>
+                    <input type="submit" value="SEND" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
