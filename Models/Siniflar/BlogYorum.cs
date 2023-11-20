@@ -9,5 +9,7 @@ namespace TravelTrip.Models.Siniflar
     {
         public Blog Deger1 { get; set; }
         public IEnumerable<Yorum> Deger2 { get; set; }
+        public IEnumerable<Blog> Deger3 { get; set; }
+        public IEnumerable<Blog> Deger4 { get; set; }
     }
 }

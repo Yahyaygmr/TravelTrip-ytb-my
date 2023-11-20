@@ -13,8 +13,11 @@ namespace TravelTrip.Controllers
         Context c = new Context();
         public ActionResult Index()
         {
-            var bloglar = c.Blogs.ToList();
-            return View(bloglar);
+            BlogYorum by = new BlogYorum();
+            by.Deger3 = c.Blogs.ToList();
+            by.Deger4 = c.Blogs.OrderByDescending(x => x.Id).Take(5).ToList();
+            by.Deger2 = c.Yorums.OrderByDescending(x => x.Id).Take(5).ToList();
+            return View(by);
         }
         public ActionResult BlogDetay(int id)
         {
