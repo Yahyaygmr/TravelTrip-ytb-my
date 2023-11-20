@@ -1,4 +1,4 @@
-﻿@model TravelTrip.Models.Siniflar.Blog
+﻿@model TravelTrip.Models.Siniflar.BlogYorum
 @{
     ViewBag.Title = "BlogDetay";
     Layout = "~/Views/Shared/_ApplicationLayout.cshtml";
@@ -34,40 +34,38 @@
         <div class="col-md-8 single-main">
             <div class="single-grid">
 
-                <img src="@Model.BlogImage" alt="" />
+                <img src="@Model.Deger1.BlogImage" alt="" />
                 <div class="post-info">
-                    <h4><a href="#">@Model.Baslik</a>  @Model.Tarih.ToShortDateString()</h4>
+                    <h4><a href="#">@Model.Deger1.Baslik</a>  @Model.Deger1.Tarih.ToShortDateString()</h4>
                 </div>
                 <p>
-                    @Model.Aciklama
+                    @Model.Deger1.Aciklama
                 </p>
             </div>
-            <ul class="comment-list">
-                <li>
-                    <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
-                    <div class="desc">
-                        <p>Kullanıcı Adı: Buraya Yorum Gelecek...<a href="#" title="Posts by admin" rel="author">admin</a></p>
-                    </div>
-                    <div class="clearfix"></div>
-                </li>
-            </ul>
-            <ul class="comment-list">
-                <li>
-                    <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
-                    <div class="desc">
-                        <p>Kullanıcı Adı: Buraya Yorum Gelecek...<a href="#" title="Posts by admin" rel="author">admin</a></p>
-                    </div>
-                    <div class="clearfix"></div>
-                </li>
-            </ul>
+
+            @foreach (var item in Model.Deger2)
+            {
+
+                <ul class="comment-list">
+                    <li>
+                        <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
+                        <div class="desc">
+                            <p>@item.KullaniciAdi : @item.YapilanYorum</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                </ul>
+            }
+
+
+
             <div class="content-form">
-                <h3>Leave a comment</h3>
+                <h3>Yorum Yap</h3>
                 <form>
-                    <input type="text" placeholder="Name" required />
-                    <input type="text" placeholder="Email" required />
-                    <input type="text" placeholder="Phone" required />
-                    <textarea placeholder="Message"></textarea>
-                    <input type="submit" value="SEND" />
+                    <input type="text" placeholder="Kullanıcı Adı" required />
+                    <input type="text" placeholder="Mail" required />
+                    <textarea placeholder="Yorum"></textarea>
+                    <input type="submit" value="Yorum Yap" />
                 </form>
             </div>
         </div>

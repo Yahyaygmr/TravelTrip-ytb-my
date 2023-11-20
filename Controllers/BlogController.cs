@@ -18,9 +18,12 @@ namespace TravelTrip.Controllers
         }
         public ActionResult BlogDetay(int id)
         {
-            var blog = c.Blogs.Where(b => b.Id == id).FirstOrDefault();
+            BlogYorum by = new BlogYorum();
 
-            return View(blog);
+            by.Deger1 = c.Blogs.Where(b => b.Id == id).FirstOrDefault();
+            by.Deger2 = c.Yorums.Where(y => y.BlogId == id).ToList();
+
+            return View(by);
         }
     }
 }
