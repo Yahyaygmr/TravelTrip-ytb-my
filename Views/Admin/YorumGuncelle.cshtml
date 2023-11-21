@@ -1,0 +1,21 @@
+﻿@model TravelTrip.Models.Siniflar.Yorum
+@{
+    ViewBag.Title = "YorumGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yorum Güncelle</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.HiddenFor(x => x.Id)
+    @Html.HiddenFor(x => x.BlogId)
+
+    @Html.LabelFor(x => x.YapilanYorum)
+    @Html.TextAreaFor(x => x.YapilanYorum, 5, 5000, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+
+    <br />
+</form>
+

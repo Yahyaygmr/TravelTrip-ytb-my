@@ -7,6 +7,7 @@ using TravelTrip.Models.Siniflar;
 
 namespace TravelTrip.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         // GET: Admin
@@ -70,6 +71,26 @@ namespace TravelTrip.Controllers
             c.SaveChanges();
             return RedirectToAction("Bloglar");
         }
-
+        [HttpGet]
+        public ActionResult YorumGuncelle(int id)
+        {
+            var yorum = c.Yorums.FirstOrDefault(y => y.Id == id);
+            return View(yorum);
+        }
+        [HttpPost]
+        public ActionResult YorumGuncelle(Yorum yrm)
+        {
+            var yorum = c.Yorums.FirstOrDefault(y => y.Id == yrm.Id);
+            yorum.YapilanYorum = yrm.YapilanYorum;
+            c.SaveChanges();
+            return RedirectToAction("Yorumlar");
+        }
+        public ActionResult YorumSil(int id)
+        {
+            var yorum = c.Yorums.FirstOrDefault(y => y.Id == id);
+            c.Yorums.Remove(yorum);
+            c.SaveChanges();
+            return RedirectToAction("Yorumlar");
+        }
     }
 }

@@ -30,8 +30,9 @@
                     <td>@item.Mail</td>
                     <td>@item.YapilanYorum</td>
                     <td>
-                        <a href="#" class="btn btn-sm btn-info">Düzenle</a>
-                        <a href="#" class="btn btn-sm btn-danger">Sil</a>
+                        <a href="/Admin/YorumGuncelle/@item.Id" class="btn btn-sm btn-outline-info form-control mb-1">Düzenle</a>
+                        <a href="/Admin/YorumSil/@item.Id" class="btn btn-sm btn-outline-danger form-control mb-1">Sil</a>
+                        <a href="/Blog/BlogDetay/@item.BlogId" class="btn btn-sm btn-outline-success form-control mb-1" target="_blank">Bloğa Git</a>
                     </td>
                 </tr>
             }

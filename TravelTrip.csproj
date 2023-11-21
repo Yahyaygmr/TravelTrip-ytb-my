@@ -133,6 +133,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DestinationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -193,6 +194,10 @@
     <Content Include="web2\js\move-top.js" />
     <Content Include="web2\single.html" />
     <Content Include="web2\w3layouts-License.txt" />
+    <Content Include="webloginTema\css\style.css" />
+    <Content Include="webloginTema\images\b4.jpg" />
+    <Content Include="webloginTema\index.html" />
+    <Content Include="webloginTema\w3layouts-License.txt" />
     <Content Include="web\about.html" />
     <Content Include="web\contact.html" />
     <Content Include="web\css\slider.css" />
@@ -272,6 +277,10 @@
     <Content Include="Views\Admin\BlogEkle.cshtml" />
     <Content Include="Views\Admin\BlogGuncelle.cshtml" />
     <Content Include="Views\Blog\YorumYap1.cshtml" />
+    <Content Include="Views\Admin\YorumGuncelle.cshtml" />
+    <Content Include="webloginTema\fonts\Asap-Regular.ttf" />
+    <Content Include="webloginTema\fonts\Audiowide-Regular.ttf" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
