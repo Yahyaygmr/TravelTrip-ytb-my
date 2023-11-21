@@ -260,6 +260,8 @@
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Blog\BlogDetay.cshtml" />
+    <Content Include="Views\Home\LastBlogs.cshtml" />
+    <Content Include="Views\Home\Begenilen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

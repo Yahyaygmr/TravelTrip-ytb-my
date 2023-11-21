@@ -29,5 +29,15 @@ namespace TravelTrip.Controllers
 
             return View();
         }
+        public PartialViewResult LastBlogs()
+        {
+           var blogs = c.Blogs.OrderByDescending(x => x.Id).Take(10).ToList();
+            return PartialView(blogs);
+        }
+        public PartialViewResult Begenilen()
+        {
+            
+            return PartialView();
+        }
     }
 }
