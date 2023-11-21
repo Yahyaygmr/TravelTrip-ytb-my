@@ -1,0 +1,11 @@
+﻿@model TravelTrip.Models.Siniflar.Yorum
+<h3>Yorum Yap</h3>
+
+<form action="/Blog/YorumYap" co method="post">
+  
+    <input type="text" placeholder="Blog Id" required name="BlogId" value="@ViewBag.Blogid"/>
+    <input type="text" placeholder="Kullanıcı Adı" required name="KullaniciAdi"/>
+    <input type="text" placeholder="Mail" required name="Mail"/>
+    <textarea placeholder="Yorum" name="YapilanYorum"></textarea>
+    <input type="submit" value="Yorum Yap" />
+</form>

@@ -28,5 +28,17 @@ namespace TravelTrip.Controllers
 
             return View(by);
         }
+        public PartialViewResult YorumYap1(int id)
+        {
+            ViewBag.Blogid = id;
+            return PartialView();
+        }
+        [HttpPost]
+        public ActionResult YorumYap(Yorum yorum)
+        {
+            c.Yorums.Add(yorum);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
