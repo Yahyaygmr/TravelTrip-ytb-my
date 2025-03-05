@@ -1,5 +1,5 @@
 # TravelTrip-ytb-my
-- Murat yüceday youtube AspNet Mvc5 ile Tatil Seyahat Sitesi seris
+-  AspNet Mvc5 ile Tatil Seyahat Sitesi seris
 # Proje Göreselleri
 ![Ekran görüntüsü 2024-02-03 150144](https://github.com/Yahyaygmr/TravelTrip-ytb-my/assets/101245826/5fc0b62e-f782-4a32-8fd1-e60ea8d16a5d)
 ![Ekran görüntüsü 2024-02-03 150223](https://github.com/Yahyaygmr/TravelTrip-ytb-my/assets/101245826/047630c8-17e0-4287-9877-f5c892b93e2f)
